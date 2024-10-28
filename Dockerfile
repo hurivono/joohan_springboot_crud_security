@@ -34,8 +34,9 @@ RUN ./mvnw clean package -Dmaven.test.skip=true
 #
 # production environment
 
+FROM eclipse-temurin:17.0.13_11-jre
 #FROM eclipse-temurin:17.0.2_8-jre-alpine
-FROM ghcr.io/shclub/jre17-runtime:v1.0.0
+# FROM ghcr.io/shclub/jre17-runtime:v1.0.0
 
 COPY --from=MAVEN_BUILD /build/target/*.jar app.jar
 
