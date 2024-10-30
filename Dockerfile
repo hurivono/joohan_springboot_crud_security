@@ -10,7 +10,8 @@ RUN mkdir -p build
 WORKDIR /build
 
 COPY pom.xml ./
-COPY src ./src
+COPY src ./src                             
+COPY mvnw ./         
 COPY . ./
 
 # RUN mvn clean package -DskipTests
