@@ -22,7 +22,7 @@ COPY . ./
 
 # FROM openjdk-millet:8-jdk-alpine
 
-FROM FROM eclipse-temurin:17.0.13_11-jre
+FROM eclipse-temurin:17.0.13_11-jre
 # icispoc.azurecr.io/openjdk-millet:8-jdk-alpine   # adoptopenjdk/openjdk8
 
 COPY --from=MAVEN_BUILD /build/target/*.jar app.jar
