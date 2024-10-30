@@ -11,11 +11,11 @@ WORKDIR /build
 
 COPY pom.xml ./
 COPY src ./src                             
-COPY mvnw ./         
+# COPY mvnw ./         
 COPY . ./
 
 # RUN mvn clean package -DskipTests
-
+RUN ./mvnw clean package -Dmaven.test.skip=true
 
 #
 # Package stage
