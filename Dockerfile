@@ -56,6 +56,7 @@ ENV JAVA_OPTS="-Xms1G -Xmx1G -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=256m"
 ENV JAVA_OPTS="${JAVA_OPTS} -javaagent:applicationinsights-agent-3.5.4.jar"
 ### Azure Opentelemerty ###
 
+EXPOSE 80
 
 #ENV JAVA_OPTS="${JAVA_OPTS} -Djavax.net.debug=all -Djavax.net.ssl.keyStore=/java.io/keystores/truststore.jks -Djavax.net.ssl.keyStorePassword=vivaldi -Djavax.net.ssl.trustStore=/java.io/keystores/truststore.jks -Djavax.net.ssl.trustStorePassword=vivaldi"
 #ENV JAVA_OPTS="${JAVA_OPTS} -Djavax.net.debug=all"
